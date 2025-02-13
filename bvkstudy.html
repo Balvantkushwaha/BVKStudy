@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BVK Study</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .all-papers-section {
+            padding: 20px;
+        }
+        .class-section {
+            margin-bottom: 20px;
+        }
+        .nav-btn {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .nav-btn:hover {
+            background-color: #f2f2f2;
+        }
+        .navbar {
+            background-color: #000000;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #cccccc;
+        }
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">BVK Study</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#all-papers">All Papers</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="home" class="jumbotron" style="background-color: #000000; color: #ffffff;">
+        <h1 class="display-4">Welcome to BVK Study!</h1>
+        <p class="lead">This website is designed to provide study materials for different college papers.</p>
+    </div>
+    <div id="about" class="container" style="background-color: #ffffff; color: #000000; padding: 20px; border: 1px solid #cccccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2>About Us</h2>
+        <p>My name is Balvant Kushwaha. I belong to Chhatarpur, Madhya Pradesh. I study from MCBU University, Chhatarpur.</p>
+    </div>
+    <div id="all-papers" class="all-papers-section" style="background-color: #ffffff; color: #000000; padding: 20px; border: 1px solid #cccccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2>All Papers</h2>
+        <div class="row">
+            <div class="col-md-3" >
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-b-sc-tab" data-toggle="pill" href="#v-pills-b-sc" role="tab" aria-controls="v-pills-b-sc" aria-selected="true">B.Sc.</a>
+                    <a class="nav-link" id="v-pills-b-a-tab" data-toggle="pill" href="#v-pills-b-a" role="tab" aria-controls="v-pills-b-a" aria-selected="true">B.A.</a>
+                    <a class="nav-link" id="v-pills-b-com-tab" data-toggle="pill" href="#v-pills-b-com" role="tab" aria-controls="v-pills-b-com" aria-selected="false">B.Com.</a>
+                    <a class="nav-link" id="v-pills-m-a-tab" data-toggle="pill" href="#v-pills-m-a" role="tab" aria-controls="v-pills-m-a" aria-selected="false">M.A.</a>
+                    <a class="nav-link" id="v-pills-m-sc-tab" data-toggle="pill" href="#v-pills-m-sc" role="tab" aria-controls="v-pills-m-sc" aria-selected="false">M.Sc.</a>
+                </div>
+            </div>
+            <div class="col-md-9" >
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- B.Sc content  -->
+                    <div class="tab-pane fade show active" id="v-pills-b-sc" role="tabpanel" aria-labelledby="v-pills-b-sc-tab">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="b-sc-1-year-tab" data-toggle="tab" href="#b-sc-1-year" role="tab" aria-controls="b-sc-1-year" aria-selected="true">1 Year</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="b-sc-2-year-tab" data-toggle="tab" href="#b-sc-2-year" role="tab" aria-controls="b-sc-2-year" aria-selected="false">2 Year</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="b-sc-3-year-tab" data-toggle="tab" href="#b-sc-3-year" role="tab" aria-controls="b-sc-3-year" aria-selected="false">3 Year</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="b-sc-1-year" role="tabpanel" aria-labelledby="b-sc-1-year-tab">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                chemistry-p2-transition-elements-chemi-energetics-rs-956-2024
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Physics
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Chemistry
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="b-sc-2-year" role="tabpanel" aria-labelledby="b-sc-2-year-tab">
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                physics-p1-waves-and-optics-rs-957-2024
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFive">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                zoology-diversity-of-chordates-and-comparative-anatomy-rs-952-2024
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingSix">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                physics-p1-waves-and-optics-rs-957-2024
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="b-sc-3-year" role="tabpanel" aria-labelledby="b-sc-3-year-tab">
+                                <div class="card">
+                                    <div class="card-header" id="headingSeven">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                                Electronics
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingEight">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                                Mechanics
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingNine">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                                Thermodynamics
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- B.A content  -->
+                    <div class="tab-pane fade show " id="v-pills-b-a" role="tabpanel" aria-labelledby="v-pills-b-a-tab">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="b-a-1-year-tab" data-toggle="tab" href="#b-a-1-year" role="tab" aria-controls="b-a-1-year" aria-selected="true">1 Year</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="b-a-2-year-tab" data-toggle="tab" href="#b-a-2-year" role="tab" aria-controls="b-a-2-year" aria-selected="false">2 Year</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="b-a-3-year-tab" data-toggle="tab" href="#b-a-3-year" role="tab" aria-controls="b-a-3-year" aria-selected="false">3 Year</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="b-a-1-year" role="tabpanel" aria-labelledby="b-a-1-year-tab">
+                                <div class="card">
+                                    <div class="card-header" id="headingBA1Y1">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseBA1Y1" aria-expanded="true" aria-controls="collapseBA1Y1">
+                                                Hindi
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA1Y1" class="collapse show" aria-labelledby="headingBA1Y1" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingBA1YP2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBA1YP2" aria-expanded="false" aria-controls="collapseBA1YP2">
+                                                English
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA1YP2" class="collapse" aria-labelledby="headingBA1YP2" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>                          
+                               
+                            </div>
+
+                            <div class="tab-pane fade show " id="b-a-2-year" role="tabpanel" aria-labelledby="b-a-2-year-tab">
+                                <div class="card">
+                                    <div class="card-header" id="headingBA2YP1">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseBA2YP1" aria-expanded="true" aria-controls="collapseBA2YP1">
+                                                Polity
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA2YP1" class="collapse show" aria-labelledby="headingBA2YP1" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingBA2YP2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBA2YP2" aria-expanded="false" aria-controls="collapseBA2YP2">
+                                                Geophy
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA2YP2" class="collapse" aria-labelledby="headingBA2YP2" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>                          
+                               
+                            </div>
+                            <div class="tab-pane fade" id="b-a-3-year" role="tabpanel" aria-labelledby="b-a-3-year-tab">
+                                <div class="card">
+                                    <div class="card-header" id="headingBA3YP1">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseBA3YP1" aria-expanded="true" aria-controls="collapseBA3YP1">
+                                                Economic
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA3YP1" class="collapse show" aria-labelledby="headingBA3YP1" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingBA3YP2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBA3YP2" aria-expanded="false" aria-controls="collapseBA3YP2">
+                                                History
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA3YP2" class="collapse" aria-labelledby="headingBA3YP2" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingBA3YP3">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBA3YP3" aria-expanded="false" aria-controls="collapseBA3YP3">
+                                                Indian constitution
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA3YP3" class="collapse" aria-labelledby="headingBA3YP3" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- B.A content -->
+
+                    <!-- B.Com -->
+                    <div class="tab-pane fade show " id="v-pills-b-com" role="tabpanel" aria-labelledby="v-pills-b-com-tab">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="b-com-1-year-tab" data-toggle="tab" href="#b-com-1-year" role="tab" aria-controls="b-com-1-year" aria-selected="true">1 Year</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="b-com-2-year-tab" data-toggle="tab" href="#b-com-2-year" role="tab" aria-controls="b-com-2-year" aria-selected="false">2 Year</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="b-com-3-year-tab" data-toggle="tab" href="#b-com-3-year" role="tab" aria-controls="b-com-3-year" aria-selected="false">3 Year</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="b-com-1-year" role="tabpanel" aria-labelledby="b-com-1-year-tab">
+                                <div class="card">
+                                    <div class="card-header" id="headingBA1Y1">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseBA1Y1" aria-expanded="true" aria-controls="collapseBA1Y1">
+                                               GST-1
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA1Y1" class="collapse show" aria-labelledby="headingBA1Y1" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingBA1YP2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBA1YP2" aria-expanded="false" aria-controls="collapseBA1YP2">
+                                                TAX-1
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA1YP2" class="collapse" aria-labelledby="headingBA1YP2" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>                          
+                               
+                            </div>
+
+                            <div class="tab-pane fade show " id="b-com-2-year" role="tabpanel" aria-labelledby="b-com-2-year-tab">
+                                <div class="card">
+                                    <div class="card-header" id="headingBA2YP1">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseBA2YP1" aria-expanded="true" aria-controls="collapseBA2YP1">
+                                                GST-2
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA2YP1" class="collapse show" aria-labelledby="headingBA2YP1" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingBA2YP2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBA2YP2" aria-expanded="false" aria-controls="collapseBA2YP2">
+                                                TAX-2
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA2YP2" class="collapse" aria-labelledby="headingBA2YP2" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>                          
+                               
+                            </div>
+                            <div class="tab-pane fade" id="b-com-3-year" role="tabpanel" aria-labelledby="b-com-3-year-tab">
+                                <div class="card">
+                                    <div class="card-header" id="headingBA3YP1">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseBA3YP1" aria-expanded="true" aria-controls="collapseBA3YP1">
+                                                GST-3
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA3YP1" class="collapse show" aria-labelledby="headingBA3YP1" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingBA3YP2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBA3YP2" aria-expanded="false" aria-controls="collapseBA3YP2">
+                                                TAX-3
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA3YP2" class="collapse" aria-labelledby="headingBA3YP2" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingBA3YP3">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBA3YP3" aria-expanded="false" aria-controls="collapseBA3YP3">
+                                                Banking
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseBA3YP3" class="collapse" aria-labelledby="headingBA3YP3" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <a href="#" class="btn btn-sm btn-primary">Download Study Materials</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- B.Com -->
+
+                   
+                
+                </div>                      
+            </div>
+        </div>
+    </div>
+	
+        <div class="footer">
+        <p>&copy; 2025 BVK Study. All rights reserved.</p>
+       </div>
+</body>
+</html>
